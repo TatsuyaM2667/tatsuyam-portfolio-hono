@@ -120,12 +120,12 @@ pre {
     inset: 0;
     z-index: -1;
     border-radius: inherit;
-    background: rgba(10, 15, 30, 0.6);
+    background: rgba(10, 15, 30, 0.35);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    opacity: 0.99;
+    opacity: 1;
     mix-blend-mode: normal;
     will-change: transform, backdrop-filter;
 }
@@ -154,7 +154,7 @@ pre {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
-    
+
     .terminal-window::before {
         background: rgba(10, 15, 30, 0.25) !important;
         backdrop-filter: blur(12px) !important;
@@ -235,53 +235,57 @@ pre {
 }
 
 .typing-cursor {
-  display: inline-block;
-  width: 8px;
-  height: 1.2em;
-  background: var(--text);
-  margin-left: 2px;
-  vertical-align: middle;
-  animation: blink 1s step-end infinite;
+    display: inline-block;
+    width: 8px;
+    height: 1.2em;
+    background: var(--text);
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
+    from,
+    to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Terminal-native styles */
 .tree-output {
-  margin-top: 1rem;
-  line-height: 1.4;
-  border-left: 2px solid var(--border);
-  padding-left: 1rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    border-left: 2px solid var(--border);
+    padding-left: 1rem;
 }
 
 .terminal-status-info {
-  margin-top: 1rem;
-  line-height: 1.6;
+    margin-top: 1rem;
+    line-height: 1.6;
 }
 
 .status-label {
-  display: inline-block;
-  width: 100px;
-  color: var(--accent);
-  font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    color: var(--accent);
+    font-weight: bold;
 }
 
 .status-links p {
-  margin: 0.2rem 0;
+    margin: 0.2rem 0;
 }
 
 @media (max-width: 600px) {
-  .status-label {
-    display: block;
-    width: auto;
-    margin-bottom: 0.1rem;
-  }
-  
-  .terminal-status-info p {
-    font-size: 0.85rem;
-  }
-}
+    .status-label {
+        display: block;
+        width: auto;
+        margin-bottom: 0.1rem;
+    }
 
+    .terminal-status-info p {
+        font-size: 0.85rem;
+    }
+}
