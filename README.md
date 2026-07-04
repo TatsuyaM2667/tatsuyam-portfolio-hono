@@ -33,6 +33,7 @@ A modern, interactive portfolio website built with **React 19**, **TypeScript**,
 {
   "react": "^19.2.6",
   "react-dom": "^19.2.6",
+  "hono": "^4.12.27",
   "three": "^0.184.0",
   "animejs": "^4.4.1",
   "i18next": "^26.3.1",
