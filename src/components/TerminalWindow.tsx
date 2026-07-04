@@ -12,7 +12,7 @@ const TerminalWindow: React.FC<TerminalWindowProps> = ({ children, title }) => {
       style={{
         position: "relative",
         // ★ トリッキーな子要素（-z-10）を使わず、親自身に直接背景とボカシを適用
-        backgroundColor: "transparent",
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
         backdropFilter: "none",
         WebkitBackdropFilter: "none",
 
