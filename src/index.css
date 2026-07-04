@@ -14,16 +14,14 @@
     --mono: "Fira Code", "JetBrains Mono", "Courier New", monospace;
 }
 
-/* Tokyo Night (Default) - Adjusted for Summer Sky */
 [data-theme="tokyo"] {
     --text: #e0e6f4;
     --text-h: #ffffff;
-    --accent: #ffcc33; /* Soft sunset/summer sun orange */
+    --accent: #ffcc33;
     --prompt: #c3e88d;
     --success: #c3e88d;
 }
 
-/* Matrix (Green) - Brighter */
 [data-theme="matrix"] {
     --text: #d0ffd0;
     --text-h: #00ff41;
@@ -33,7 +31,6 @@
     --border: rgba(0, 255, 65, 0.3);
 }
 
-/* Dracula (Purple) - Brighter */
 [data-theme="dracula"] {
     --text: #ffffff;
     --text-h: #bd93f9;
@@ -53,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    background: #0a0b1e; /* Fallback base color */
+    background: #0a0b1e;
     color: var(--text);
     font-family: var(--mono);
     overflow-x: hidden;
@@ -130,7 +127,7 @@ pre {
     will-change: transform, backdrop-filter;
 }
 
-/* iOS WebKit GPU Watchdog Fallback (For all iOS devices including iPad) */
+/* iOS WebKit */
 @supports (-webkit-touch-callout: none) {
     .terminal-window::before {
         background: rgba(10, 15, 30, 0.7) !important;

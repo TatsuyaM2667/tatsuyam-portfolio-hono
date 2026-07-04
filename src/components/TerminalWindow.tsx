@@ -11,13 +11,12 @@ const TerminalWindow: React.FC<TerminalWindowProps> = ({ children, title }) => {
       className="terminal-window"
       style={{
         position: "relative",
-        // ★ トリッキーな子要素（-z-10）を使わず、親自身に直接背景とボカシを適用
         backgroundColor: "rgba(0, 0, 0, 0.3)",
         backdropFilter: "none",
         WebkitBackdropFilter: "none",
 
         borderRadius: "16px",
-        overflow: "hidden", // ヘッダーの角丸はみ出しをここで一括カット
+        overflow: "hidden",
 
         // GPUレンダリングの強制
         transform: "translateZ(0)",
