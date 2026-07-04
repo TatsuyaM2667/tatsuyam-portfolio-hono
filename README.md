@@ -19,7 +19,8 @@ A modern, interactive portfolio website built with **React 19**, **TypeScript**,
 
 - **Frontend**: React 19 with TypeScript (86.8%)
 - **Styling**: CSS (11.9%)
-- **Build Tool**: Vite
+- **Build Tool**: Bun
+- **Backend Framework**: Hono
 - **3D Graphics**: Three.js
 - **Animations**: Anime.js
 - **Internationalization**: i18next + react-i18next
@@ -51,8 +52,7 @@ A modern, interactive portfolio website built with **React 19**, **TypeScript**,
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
+- Bun (v1.3.14-canary.1 or higher)
 
 ### Installation
 
@@ -62,7 +62,7 @@ git clone https://github.com/TatsuyaM2667/TatsuyaM-portfolio.git
 cd TatsuyaM-portfolio
 
 # Install dependencies
-npm install
+bun install
 ```
 
 ### Development
@@ -158,10 +158,10 @@ Creates fluid, professional animations for:
 ## 📝 Available Commands
 
 ```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run preview  # Preview production build locally
-npm run lint     # Check code quality with ESLint
+bun run dev      # Start development server
+bun run build    # Build for production
+bun run preview  # Preview production build locally
+bun run lint     # Check code quality with ESLint
 ```
 
 ## 🎨 Customization Guide
