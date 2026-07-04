@@ -2,7 +2,9 @@
   "name": "tatsuyam-portfolio-hono",
   "type": "module",
   "scripts": {
-    "build": "bun run build.ts",
+    "build:css": "bunx tailwindcss -i ./src/index.css -o ./public/dist/main.css --minify",
+    "build:fe": "bun run build.ts",
+    "build": "bun run build:css && bun run build:fe",
     "dev": "bun run build && bun run --hot server/index.ts"
   },
   "dependencies": {

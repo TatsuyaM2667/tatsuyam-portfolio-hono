@@ -1,13 +1,12 @@
 // build.ts
-import tailwindcss from "bun-plugin-tailwindcss";
 
 // 1. フロントエンド (React) のビルド
 await Bun.build({
   entrypoints: ["./src/main.tsx"],
-  outdir: "./public/dist", // ★ public/dist に出力
+  outdir: "./public/dist",
   naming: "[name].[ext]",
   minify: true,
-  plugins: [tailwindcss()],
+  // プラグインは不要になったので削除
 });
 
 // 2. バックエンド (Hono) のビルド
@@ -18,4 +17,4 @@ await Bun.build({
   minify: true,
 });
 
-console.log("🎉 Frontend & Backend successfully built with Bun!");
+console.log("🎉 JS & Backend successfully built with Bun!");
