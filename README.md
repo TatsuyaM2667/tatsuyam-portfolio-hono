@@ -43,7 +43,7 @@ A modern, interactive portfolio website built with **React 19**, **TypeScript**,
 ### Dev Tools
 ```json
 {
-  "vite": "^8.0.12",
+  "bun": "^1.3.14",
   "typescript": "~6.0.2",
   "eslint": "^10.3.0"
 }
@@ -68,25 +68,16 @@ bun install
 ### Development
 
 ```bash
-# Start dev server (http://localhost:5173)
-npm run dev
+# Start dev server 
+bun run dev
 ```
 
 ### Production
 
 ```bash
 # Build for production
-npm run build
+bun run build
 
-# Preview production build
-npm run preview
-```
-
-### Code Quality
-
-```bash
-# Run ESLint
-npm run lint
 ```
 
 ## 📊 Project Overview
@@ -96,9 +87,9 @@ npm run lint
 | **Language** | TypeScript (86.8%) |
 | **Styling** | CSS (11.9%) |
 | **Other** | 1.3% |
-| **Build Tool** | Vite |
+| **Build Tool** | bun |
 | **React Version** | 19.2.6 |
-| **Node.js** | v16+ |
+| **Hono** | 4.12.27 |
 
 ## 📁 Project Structure
 
