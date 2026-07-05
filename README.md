@@ -1,4 +1,4 @@
-# TatsuyaM Portfolio
+# TatsuyaM Portfolio (Hono && Bun edition)
 
 ![Portfolio-FrameShot](public/ScreenShot.png)
 
