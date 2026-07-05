@@ -213,39 +213,39 @@ function AppContent() {
 
         if (path === "" || path === "~" || path === "home") {
           setCurrentPage("home");
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setCommandHistory((prev) => [...prev, "Changed directory to ~/home"]);
         } else if (path === "projects") {
           setCurrentPage("projects");
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setCommandHistory((prev) => [
             ...prev,
             "Changed directory to ~/projects",
           ]);
         } else if (path === "skills") {
           setCurrentPage("skills");
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setCommandHistory((prev) => [
             ...prev,
             "Changed directory to ~/skills",
           ]);
         } else if (path === "contact") {
           setCurrentPage("contact");
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setCommandHistory((prev) => [
             ...prev,
             "Changed directory to ~/contact",
           ]);
         } else if (path === "experience") {
           setCurrentPage("experience");
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setCommandHistory((prev) => [
             ...prev,
             "Changed directory to ~/experience",
           ]);
         } else if (path === "research") {
           setCurrentPage("research");
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setCommandHistory((prev) => [
             ...prev,
             "Changed directory to ~/research",
@@ -384,12 +384,12 @@ function AppContent() {
         break;
       case "skills":
         setCurrentPage("skills");
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setCommandHistory((prev) => [...prev, "Navigating to skills..."]);
         break;
       case "contact":
         setCurrentPage("contact");
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setCommandHistory((prev) => [...prev, "Navigating to contact..."]);
         break;
       case "history":
@@ -534,7 +534,7 @@ function AppContent() {
             padding: "0.5rem 0",
             borderBottom: "1px solid rgba(255,255,255,0.05)",
             flexWrap: "wrap",
-            gap: "1rem"
+            gap: "1rem",
           }}
         >
           <nav className="terminal-nav">
@@ -576,7 +576,7 @@ function AppContent() {
               border: "1px solid rgba(255,255,255,0.1)",
               cursor: "pointer",
               position: "relative",
-              marginLeft: "auto"
+              marginLeft: "auto",
             }}
           >
             <div
@@ -668,18 +668,18 @@ function AppContent() {
                       transition: "all 0.2s",
                       display: "flex",
                       justifyContent: "space-between",
-                      alignItems: "center"
+                      alignItems: "center",
                     }}
                     onMouseEnter={(e) =>
-                    (e.currentTarget.style.background =
-                      "rgba(255,255,255,0.12)")
+                      (e.currentTarget.style.background =
+                        "rgba(255,255,255,0.12)")
                     }
                     onMouseLeave={(e) =>
-                    (e.currentTarget.style.background = language.startsWith(
-                      lang.code,
-                    )
-                      ? "rgba(255,255,255,0.08)"
-                      : "transparent")
+                      (e.currentTarget.style.background = language.startsWith(
+                        lang.code,
+                      )
+                        ? "rgba(255,255,255,0.08)"
+                        : "transparent")
                     }
                   >
                     <span>{lang.label}</span>
@@ -785,17 +785,16 @@ function AppContent() {
         )}
 
         <footer className="terminal-footer">
-          <p>© 2026 Tatsuya-PortfolioOS v2.0.0 - Built with React & Vite</p>
+          <p>
+            © 2026 Tatsuya-PortfolioOS v3.0.0 - Built with React && Bun && Hono
+          </p>
         </footer>
       </div>
     </>
   );
 }
 
-
 function App() {
-
-
   return (
     <LanguageProvider>
       <AppContent />
