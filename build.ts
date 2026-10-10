@@ -1,15 +1,8 @@
 // build.ts
+export {};
 
-// 1. フロントエンド (React) のビルド
-await Bun.build({
-  entrypoints: ["./src/main.tsx"],
-  outdir: "./public/dist",
-  naming: "[name].[ext]",
-  minify: true,
-  // プラグインは不要になったので削除
-});
-
-// 2. バックエンド (Hono) のビルド
+// Bundles the Hono API into a Cloudflare Pages Functions entry.
+// The frontend is a Rust/Leptos WASM app built separately by Trunk (`build:fe`).
 await Bun.build({
   entrypoints: ["./server/index.ts"],
   outdir: "./functions",
@@ -17,4 +10,4 @@ await Bun.build({
   minify: true,
 });
 
-console.log("🎉 JS & Backend successfully built with Bun!");
+console.log("Server Bundled to functions/[[path]].ts");

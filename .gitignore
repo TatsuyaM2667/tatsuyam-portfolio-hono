@@ -6,7 +6,13 @@ node_modules/
 dist/
 dist-ssr/
 *.local
-functions/[[path]].ts
+
+# --- Cloudflare ---
+.wrangler/
+functions/
+
+# --- Rust / WASM ---
+frontend/target/
 
 # --- Environment Variables ---
 .env

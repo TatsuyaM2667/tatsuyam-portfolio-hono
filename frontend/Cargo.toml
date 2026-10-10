@@ -1,0 +1,38 @@
+[package]
+name = "tatsuya-portfolio"
+version = "4.0.0"
+edition = "2021"
+description = "Tatsuya Miura portfolio — WASM frontend (Leptos)"
+
+[dependencies]
+leptos = { version = "0.8", features = ["csr"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = [
+  "Window",
+  "Document",
+  "Element",
+  "HtmlElement",
+  "HtmlInputElement",
+  "HtmlDivElement",
+  "KeyboardEvent",
+  "HashChangeEvent",
+  "MouseEvent",
+  "FocusEvent",
+  "SubmitEvent",
+  "Storage",
+  "Event",
+  "Response",
+  "Navigator",
+  "Location",
+] }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

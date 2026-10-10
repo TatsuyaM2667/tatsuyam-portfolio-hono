@@ -1,0 +1,13 @@
+[build]
+target = "index.html"
+dist = "../dist"
+release = false
+filehash = true
+
+[serve]
+dist = "../dist"
+port = 8080
+
+# Proxy /api to the Bun/Hono dev server (bun run dev:server).
+[[proxies]]
+backend = "http://127.0.0.1:8787/api"
